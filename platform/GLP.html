@@ -206,6 +206,30 @@ footer .flg{font-size:.76em;color:#57534e;max-width:800px;margin:16px auto 0;lin
 .pgrid-col .pg-item.short{aspect-ratio:1.2/1}
 .pgrid-col .pg-item.med{aspect-ratio:1/1}
 .pgrid-col .pg-item.wide{aspect-ratio:1.5/1}
+/* FRAMER-STYLE PHOTO GRID */
+.fpg{display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:16px;max-width:1200px;margin:0 auto}
+.fpg-l,.fpg-c,.fpg-r{display:flex;flex-direction:column;gap:12px}
+.fpg-top{display:grid;grid-template-columns:1fr;gap:12px}
+.fpg-bot{display:grid;grid-template-columns:16px 1fr;gap:12px}
+.fpg-r{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fpg-rl,.fpg-rr{display:flex;flex-direction:column;gap:12px}
+.fpg-tall{aspect-ratio:.6/1;border-radius:16px;overflow:hidden;background:var(--hbg)}
+.fpg-med{aspect-ratio:1.1/1;border-radius:16px;overflow:hidden;background:var(--hbg)}
+.fpg-wide{aspect-ratio:1.5/.75;border-radius:16px;overflow:hidden;background:var(--hbg);margin-top:12px}
+.fpg-gap{min-height:8px}
+.fpg img{width:100%;height:100%;object-fit:cover;display:block}
+.fpg-txt{margin-top:48px;max-width:800px;margin-left:auto;margin-right:auto}
+.fpg-txt-inner{display:flex;flex-wrap:wrap;gap:24px;justify-content:center}
+.fpg-txt-item{max-width:220px;padding:16px 20px;border-left:3px solid var(--grn);background:var(--crd);border-radius:0 12px 12px 0}
+[dir="rtl"] .fpg-txt-item{border-left:none;border-right:3px solid var(--grn);border-radius:12px 0 0 12px}
+.fpg-txt-item.right{text-align:right;border-left-color:var(--gld)}
+[dir="rtl"] .fpg-txt-item.right{border-right-color:var(--gld);text-align:left}
+.fpg-txt-item.left{text-align:left}
+[dir="rtl"] .fpg-txt-item.left{text-align:right}
+.fpg-txt-q{font-size:2.4em;font-weight:900;color:var(--grn);line-height:0;display:block;margin-bottom:-4px;opacity:.3}
+.fpg-txt-item p{font-size:.95em;font-weight:600;color:var(--txt);line-height:1.5;margin:0}
+@media(max-width:900px){.fpg{grid-template-columns:1fr 1fr}.fpg-c{display:none}}
+@media(max-width:600px){.fpg{grid-template-columns:1fr}.fpg-r{grid-template-columns:1fr 1fr}}
 /* STAT CARD WITH CHECK */
 .st-check{display:flex;align-items:flex-start;gap:14px;text-align:left;padding:20px 0}
 .st-check .s-check{width:28px;height:28px;margin-top:2px;color:var(--grn)}
@@ -541,27 +565,53 @@ ttq.instance('D853PNRC77U26NJHJTJ0').page();
   </div>
 </section>
 
-<!-- PHOTO GRID -->
-<section class="s" style="background:var(--hbg);text-align:center">
+<!-- PHOTO GRID — Framer-style masonry -->
+<section class="s" style="background:var(--hbg)">
   <div class="w">
-    <h2 class="h h-lang"><span data-lang="en">Real patients. Real transformations.</span><span data-lang="ar">مرضى حقيقيون. تحولات حقيقية.</span></h2>
-    <p class="p h-lang" style="margin:0 auto 40px;text-align:center"><span data-lang="en">Join 500,000+ patients who transformed their health with ROBOT HOUSE.</span><span data-lang="ar">انضم إلى أكثر من 500,000 مريض غيروا صحتهم مع ROBOT HOUSE.</span></p>
-    <div class="pgrid" id="photoGrid">
-      <div class="pgrid-col" data-speed="1">
-        <div class="pg-item tall"><img src="womens-health-1.jpg" alt="" loading="lazy"></div>
-        <div class="pg-item short"><img src="mens-health-1.jpg" alt="" loading="lazy"></div>
+    <h2 class="h h-lang" style="text-align:center"><span data-lang="en">Real patients. Real results.</span><span data-lang="ar">مرضى حقيقيون. نتائج حقيقية.</span></h2>
+    <p class="p h-lang" style="margin:0 auto 48px;text-align:center"><span data-lang="en">Meet real people who transformed their health with ROBOT HOUSE.</span><span data-lang="ar">قابل أناساً حقيقيين غيروا صحتهم مع ROBOT HOUSE.</span></p>
+    <div class="fpg">
+      <div class="fpg-l">
+        <div class="fpg-top">
+          <div class="fpg-tall"><img src="sM65wSd5agaAeh4Sdg52qAj8U.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="fpg-bot">
+          <div class="fpg-gap"></div>
+          <div class="fpg-med"><img src="k63bBZRa4UL9ErsGdimeWTEodv4.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="fpg-wide"><img src="i3l6L4laHW3MqKWTarHLsEu67k.jpg" alt="" loading="lazy"></div>
       </div>
-      <div class="pgrid-col" data-speed="0.5">
-        <div class="pg-item med"><img src="peptides-1.jpg" alt="" loading="lazy"></div>
-        <div class="pg-item wide"><img src="hair-1.jpg" alt="" loading="lazy"></div>
+      <div class="fpg-c">
+        <div class="fpg-gap"></div>
+        <div class="fpg-tall"><img src="79palwpwbJObwiTXk84wenTFQs.jpg" alt="" loading="lazy"></div>
+        <div class="fpg-gap"></div>
       </div>
-      <div class="pgrid-col" data-speed="1.2">
-        <div class="pg-item short"><img src="skincare-1.jpg" alt="" loading="lazy"></div>
-        <div class="pg-item tall"><img src="meals-1.jpg" alt="" loading="lazy"></div>
+      <div class="fpg-r">
+        <div class="fpg-rl">
+          <div class="fpg-gap"></div>
+          <div class="fpg-tall"><img src="xo40LTpGRUNbRgY5ygK0CstPbM.jpg" alt="" loading="lazy"></div>
+        </div>
+        <div class="fpg-rr">
+          <div class="fpg-med"><img src="bakcP5XR62DqGhmWQjHi73so.jpg" alt="" loading="lazy"></div>
+          <div class="fpg-med"><img src="zzMCmHZvu9FWDMjWLwTnXZz3mw.jpg" alt="" loading="lazy"></div>
+          <div class="fpg-gap"></div>
+        </div>
       </div>
-      <div class="pgrid-col" data-speed="0.8">
-        <div class="pg-item wide"><img src="womens-health-2.jpg" alt="" loading="lazy"></div>
-        <div class="pg-item med"><img src="mens-health-2.jpg" alt="" loading="lazy"></div>
+    </div>
+    <div class="fpg-txt">
+      <div class="fpg-txt-inner">
+        <div class="fpg-txt-item right">
+          <span class="fpg-txt-q">"</span>
+          <p class="h-lang"><span data-lang="en">Modern healthcare,<br>built around you.</span><span data-lang="ar">رعاية صحية عصرية،<br>مبنية حولك.</span></p>
+        </div>
+        <div class="fpg-txt-item left">
+          <span class="fpg-txt-q">"</span>
+          <p class="h-lang"><span data-lang="en">Personalized care that<br>fits your life.</span><span data-lang="ar">رعاية مخصصة<br>تناسب حياتك.</span></p>
+        </div>
+        <div class="fpg-txt-item right">
+          <span class="fpg-txt-q">"</span>
+          <p class="h-lang"><span data-lang="en">You're in control.<br>We're here to help.</span><span data-lang="ar">السيطرة بيدك.<br>نحن هنا لمساعدتك.</span></p>
+        </div>
       </div>
     </div>
   </div>
@@ -1030,8 +1080,8 @@ function subQ(){document.getElementById("quiz").style.display="none";document.ge
 function tq(e){e.classList.toggle("open");let a=e.querySelector('.a');if(a)a.style.display=e.classList.contains('open')?'block':'none'}
 // Weight slider
 (function(){var s=document.getElementById('wsSlider');if(!s)return;var c=document.getElementById('wsCurrent'),r=document.getElementById('wsResult'),f=document.getElementById('wsFilled');function u(){var v=parseInt(s.value);c.textContent=v;var loss=Math.round(v*0.23);r.textContent=v-loss;var pct=((v-140)/(400-140))*100;f.style.width=pct+'%'}s.addEventListener('input',u);u()})();
-// Photo grid parallax
-(function(){var g=document.getElementById('photoGrid');if(!g)return;var c=g.querySelectorAll('.pgrid-col');function p(){var sy=window.scrollY;c.forEach(function(col){var sp=parseFloat(col.dataset.speed)||1;var o=col.getBoundingClientRect().top;var h=window.innerHeight;if(o<h&&o>-col.offsetHeight){var d=((h-o)/h)-0.5;col.style.transform='translateY('+(d*30*sp)+'px)'}})}window.addEventListener('scroll',p);p()})();
+// Framer photo grid scroll reveal
+(function(){var g=document.querySelector('.fpg');if(!g)return;var c=g.querySelectorAll('.fpg-tall,.fpg-med,.fpg-wide');function p(){var sy=window.scrollY;c.forEach(function(el){var r=el.getBoundingClientRect();var h=window.innerHeight;if(r.top<h&&r.bottom>0){var v=1-(r.top/h);v=Math.max(0,Math.min(1,v));el.style.transform='translateY('+(v*20-10)+'px)';el.style.opacity=Math.min(1,v*1.5)}})}window.addEventListener('scroll',p);p()})();
 function tt(){var d=document.body;d.classList.toggle('dark');var t=document.getElementById('themeToggle');t.textContent=d.classList.contains('dark')?'☀️':'🌙';localStorage.setItem('rh_theme',d.classList.contains('dark')?'dark':'light')}
 (function(){var t=localStorage.getItem('rh_theme');if(t==='dark'){document.body.classList.add('dark');document.getElementById('themeToggle').textContent='☀️'}})();
 sl('en');
