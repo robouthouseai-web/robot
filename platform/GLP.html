@@ -217,7 +217,11 @@ footer .flg{font-size:.76em;color:#57534e;max-width:800px;margin:16px auto 0;lin
 .fpg-med{aspect-ratio:1.1/1;border-radius:16px;overflow:hidden;background:var(--hbg)}
 .fpg-wide{aspect-ratio:1.5/.75;border-radius:16px;overflow:hidden;background:var(--hbg);margin-top:12px}
 .fpg-gap{min-height:8px}
-.fpg img{width:100%;height:100%;object-fit:cover;display:block}
+.fpg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.25,.46,.45,.94),filter .4s}
+.fpg-tall,.fpg-med,.fpg-wide{position:relative;overflow:hidden;cursor:pointer}
+.fpg-tall::after,.fpg-med::after,.fpg-wide::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(46,147,111,.08),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.fpg-tall:hover::after,.fpg-med:hover::after,.fpg-wide:hover::after{opacity:1}
+.fpg-tall:hover img,.fpg-med:hover img,.fpg-wide:hover img{transform:scale(1.04);filter:brightness(1.04) saturate(1.02)}
 .fpg-txt{margin-top:48px;max-width:800px;margin-left:auto;margin-right:auto}
 .fpg-txt-inner{display:flex;flex-wrap:wrap;gap:24px;justify-content:center}
 .fpg-txt-item{max-width:220px;padding:16px 20px;border-left:3px solid var(--grn);background:var(--crd);border-radius:0 12px 12px 0}
@@ -545,9 +549,9 @@ ttq.instance('D853PNRC77U26NJHJTJ0').page();
     <h2 class="c-title h-lang"><span data-lang="en">Doctor-formulated daily support</span><span data-lang="ar">دعم يومي بتركيبة أطباء</span></h2>
     <p class="c-sub h-lang"><span data-lang="en">Evidence-based dosing with high-quality ingredients.</span><span data-lang="ar">جرعات قائمة على الأدلة بمكونات عالية الجودة.</span></p>
     <div class="c-cards">
-      <div class="c-card"><div class="c-im"><img src="step-1.jpg" alt="" loading="lazy"></div><h3 class="h-lang"><span data-lang="en">Daily Essentials</span><span data-lang="ar">أساسيات يومية</span></h3><div class="c-pr">$49/mo</div><p class="h-lang"><span data-lang="en">Multivitamin, D3, omega-3 &amp; more</span><span data-lang="ar">فيتامينات متعددة، D3، أوميغا-3 والمزيد</span></p><a href="#quiz" class="c-cta" style="background:var(--amb);color:#fff" class="h-lang"><span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span></a></div>
-      <div class="c-card"><div class="c-im"><img src="step-2.jpg" alt="" loading="lazy"></div><h3 class="h-lang"><span data-lang="en">Performance</span><span data-lang="ar">الأداء</span></h3><div class="c-pr">$79/mo</div><p class="h-lang"><span data-lang="en">Pre-workout, protein &amp; recovery</span><span data-lang="ar">ما قبل التمرين، بروتين وتعافي</span></p><a href="#quiz" class="c-cta" style="background:var(--amb);color:#fff" class="h-lang"><span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span></a></div>
-      <div class="c-card"><div class="c-im"><img src="step-3.jpg" alt="" loading="lazy"></div><h3 class="h-lang"><span data-lang="en">Sleep &amp; Recovery</span><span data-lang="ar">النوم والتعافي</span></h3><div class="c-pr">$59/mo</div><p class="h-lang"><span data-lang="en">Melatonin, magnesium &amp; calming blends</span><span data-lang="ar">ميلاتونين، مغنيسيوم وخلطات مهدئة</span></p><a href="#quiz" class="c-cta" style="background:var(--amb);color:#fff" class="h-lang"><span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span></a></div>
+      <div class="c-card"><div class="c-im"><img src="mens-health-1.jpg" alt="" loading="lazy"></div><h3 class="h-lang"><span data-lang="en">Daily Essentials</span><span data-lang="ar">أساسيات يومية</span></h3><div class="c-pr">$49/mo</div><p class="h-lang"><span data-lang="en">Multivitamin, D3, omega-3 &amp; more</span><span data-lang="ar">فيتامينات متعددة، D3، أوميغا-3 والمزيد</span></p><a href="#quiz" class="c-cta" style="background:var(--amb);color:#fff" class="h-lang"><span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span></a></div>
+      <div class="c-card"><div class="c-im"><img src="womens-health-3.jpg" alt="" loading="lazy"></div><h3 class="h-lang"><span data-lang="en">Performance</span><span data-lang="ar">الأداء</span></h3><div class="c-pr">$79/mo</div><p class="h-lang"><span data-lang="en">Pre-workout, protein &amp; recovery</span><span data-lang="ar">ما قبل التمرين، بروتين وتعافي</span></p><a href="#quiz" class="c-cta" style="background:var(--amb);color:#fff" class="h-lang"><span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span></a></div>
+      <div class="c-card"><div class="c-im"><img src="peptides-3.jpg" alt="" loading="lazy"></div><h3 class="h-lang"><span data-lang="en">Sleep &amp; Recovery</span><span data-lang="ar">النوم والتعافي</span></h3><div class="c-pr">$59/mo</div><p class="h-lang"><span data-lang="en">Melatonin, magnesium &amp; calming blends</span><span data-lang="ar">ميلاتونين، مغنيسيوم وخلطات مهدئة</span></p><a href="#quiz" class="c-cta" style="background:var(--amb);color:#fff" class="h-lang"><span data-lang="en">Learn More</span><span data-lang="ar">اعرف أكثر</span></a></div>
     </div>
   </div>
 </section>
@@ -577,7 +581,7 @@ ttq.instance('D853PNRC77U26NJHJTJ0').page();
         </div>
         <div class="fpg-bot">
           <div class="fpg-gap"></div>
-          <div class="fpg-med"><img src="k63bBZRa4UL9ErsGdimeWTEodv4.jpg" alt="" loading="lazy"></div>
+          <div class="fpg-med"><img src="k63bBZRa4UL9ErsGdimeWTEodv4.avif" alt="" loading="lazy"></div>
         </div>
         <div class="fpg-wide"><img src="i3l6L4laHW3MqKWTarHLsEu67k.jpg" alt="" loading="lazy"></div>
       </div>
@@ -593,7 +597,7 @@ ttq.instance('D853PNRC77U26NJHJTJ0').page();
         </div>
         <div class="fpg-rr">
           <div class="fpg-med"><img src="bakcP5XR62DqGhmWQjHi73so.jpg" alt="" loading="lazy"></div>
-          <div class="fpg-med"><img src="zzMCmHZvu9FWDMjWLwTnXZz3mw.jpg" alt="" loading="lazy"></div>
+          <div class="fpg-med"><img src="zzMCmHZvu9FWDMjWLwTnXZz3mw.avif" alt="" loading="lazy"></div>
           <div class="fpg-gap"></div>
         </div>
       </div>
@@ -689,11 +693,15 @@ ttq.instance('D853PNRC77U26NJHJTJ0').page();
 
 <section class="s-sm" style="background:var(--drk);color:#fff">
   <div class="w" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
-    <div><h2 class="h h-lang"><span data-lang="en">Modern Healthcare<br>for Real People</span><span data-lang="ar">رعاية صحية عصرية<br>لأناس حقيقيين</span></h2><p class="h-lang" style="color:#a8a29e;font-size:.95em;line-height:1.7"><span data-lang="en">Accessible, transparent, and tailored to you. No hidden fees, no insurance drama.</span><span data-lang="ar">متاحة وشفافة ومصممة خصيصاً لك. لا رسوم مخفية، لا تعقيدات تأمين.</span></p></div>
+    <div>
+      <div style="border-radius:20px;overflow:hidden;margin-bottom:24px;max-width:400px"><img src="mens-health-2.jpg" alt="" loading="lazy" style="width:100%;display:block;border-radius:20px"></div>
+      <h2 class="h h-lang"><span data-lang="en">Modern Healthcare<br>for Real People</span><span data-lang="ar">رعاية صحية عصرية<br>لأناس حقيقيين</span></h2>
+      <p class="h-lang" style="color:#a8a29e;font-size:.95em;line-height:1.7"><span data-lang="en">Accessible, transparent, and tailored to you. No hidden fees, no insurance drama.</span><span data-lang="ar">متاحة وشفافة ومصممة خصيصاً لك. لا رسوم مخفية، لا تعقيدات تأمين.</span></p>
+    </div>
     <div style="display:grid;gap:20px">
-      <div style="display:flex;align-items:flex-start;gap:16px"><div style="width:48px;height:48px;border-radius:14px;background:rgba(5,150,105,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2em">🏥</div><div><h4 style="font-weight:700;font-size:.95em;margin-bottom:2px" class="h-lang"><span data-lang="en">Licensed Providers</span><span data-lang="ar">مقدمو رعاية مرخصون</span></h4><p style="font-size:.82em;color:#a8a29e;line-height:1.6" class="h-lang"><span data-lang="en">All US-licensed and rigorously vetted.</span><span data-lang="ar">جميعهم مرخصون أمريكياً وتم فحصهم بدقة.</span></p></div></div>
-      <div style="display:flex;align-items:flex-start;gap:16px"><div style="width:48px;height:48px;border-radius:14px;background:rgba(5,150,105,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2em">📦</div><div><h4 style="font-weight:700;font-size:.95em;margin-bottom:2px" class="h-lang"><span data-lang="en">Free Shipping</span><span data-lang="ar">شحن مجاني</span></h4><p style="font-size:.82em;color:#a8a29e;line-height:1.6" class="h-lang"><span data-lang="en">Delivered with zero shipping costs.</span><span data-lang="ar">يُوصَل بدون أي تكاليف شحن.</span></p></div></div>
-      <div style="display:flex;align-items:flex-start;gap:16px"><div style="width:48px;height:48px;border-radius:14px;background:rgba(5,150,105,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2em">🔒</div><div><h4 style="font-weight:700;font-size:.95em;margin-bottom:2px" class="h-lang"><span data-lang="en">HIPAA Compliant</span><span data-lang="ar">متوافق مع HIPAA</span></h4><p style="font-size:.82em;color:#a8a29e;line-height:1.6" class="h-lang"><span data-lang="en">Your data is encrypted and private.</span><span data-lang="ar">بياناتك مشفرة وخاصة.</span></p></div></div>
+      <div style="display:flex;align-items:flex-start;gap:16px"><div style="width:52px;height:52px;border-radius:14px;background:rgba(5,150,105,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden"><img src="womens-health-1.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:brightness(1.2)"></div><div><h4 style="font-weight:700;font-size:.95em;margin-bottom:2px" class="h-lang"><span data-lang="en">Licensed Providers</span><span data-lang="ar">مقدمو رعاية مرخصون</span></h4><p style="font-size:.82em;color:#a8a29e;line-height:1.6" class="h-lang"><span data-lang="en">All US-licensed and rigorously vetted.</span><span data-lang="ar">جميعهم مرخصون أمريكياً وتم فحصهم بدقة.</span></p></div></div>
+      <div style="display:flex;align-items:flex-start;gap:16px"><div style="width:52px;height:52px;border-radius:14px;background:rgba(5,150,105,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden"><img src="peptides-2.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:brightness(1.2)"></div><div><h4 style="font-weight:700;font-size:.95em;margin-bottom:2px" class="h-lang"><span data-lang="en">Free Shipping</span><span data-lang="ar">شحن مجاني</span></h4><p style="font-size:.82em;color:#a8a29e;line-height:1.6" class="h-lang"><span data-lang="en">Delivered with zero shipping costs.</span><span data-lang="ar">يُوصَل بدون أي تكاليف شحن.</span></p></div></div>
+      <div style="display:flex;align-items:flex-start;gap:16px"><div style="width:52px;height:52px;border-radius:14px;background:rgba(5,150,105,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden"><img src="skincare-2.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:brightness(1.2)"></div><div><h4 style="font-weight:700;font-size:.95em;margin-bottom:2px" class="h-lang"><span data-lang="en">HIPAA Compliant</span><span data-lang="ar">متوافق مع HIPAA</span></h4><p style="font-size:.82em;color:#a8a29e;line-height:1.6" class="h-lang"><span data-lang="en">Your data is encrypted and private.</span><span data-lang="ar">بياناتك مشفرة وخاصة.</span></p></div></div>
     </div>
   </div>
 </section>
